@@ -1,4 +1,5 @@
 // Access the Design of the Application 
+// updated version of design process
 
 
 https://www.figma.com/design/CEhVjNmpi1i5WaamsChgRh/Koffe---Co.?node-id=5-22&p=f&t=8qnXZAUXrZzsRv4E-0
