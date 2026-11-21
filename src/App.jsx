@@ -1,4 +1,5 @@
-import SearchFeature from "../component/Search";
+import React from "react";
+import SearchFeature from "../component/ProductSearch";
 
 function App(){
 
