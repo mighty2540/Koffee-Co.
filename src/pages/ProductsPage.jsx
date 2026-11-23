@@ -1,4 +1,5 @@
-import ProductSearch from "../components/ProductSearch";
+import ProductListing from "../components/ProductListing";
+
 function ProductsPage() {
     return(
         <div className="w-full max-w-6xl mx-auto">
@@ -10,8 +11,9 @@ function ProductsPage() {
                     Manage your coffee collection
                 </p>
             </header>
+
+            <ProductListing />
             
-            <ProductSearch />
         </div>
     )
 }

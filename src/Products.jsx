@@ -1,4 +1,7 @@
-import { useState } from "react";
+  
+  /// product listing
+  
+  import { useState } from "react";
 import { coffeeBeans } from "./data.js";
 
 export default function Products() {

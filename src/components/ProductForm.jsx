@@ -12,10 +12,14 @@ function ProductForm(){
         
         // capturing storing details entered by users
         const newProduct = {
-            name : e.target.name.value,
-            origin : e.target.origin.value,
-            price : Number(e.target.price.value),
-            beanType: e.target.beanType.value,
+           id: Date.now(),
+           name:e.target.name.value,
+           origin:e.target.origin.value,
+           price:Number(e.target.price.value),
+           beanType:e.target.beanType.value,
+           orders: 0,
+           inStock: true,
+           image: ""
         }
 
         addProduct(newProduct);
@@ -40,12 +44,14 @@ function ProductForm(){
                     type="text" 
                     name="name" 
                     placeholder="Product name" 
+                    required
                     className="w-full border border-[#D6C2A8] rounded-lg px-4 py-3 text-[#4A1F16] placeholder-[#8B6B5C] outline-none focus:ring-2 focus:ring-[#C49A6C]"
                 />
                 <input 
                     type="text" 
                     name="origin" 
-                    placeholder="Origin" 
+                    placeholder="Origin"
+                    required
                     className="w-full border border-[#D6C2A8] rounded-lg px-4 py-3 text-[#4A1F16] placeholder-[#8B6B5C] outline-none focus:ring-2 focus:ring-[#C49A6C]"
                 />
                 <input 
@@ -60,6 +66,7 @@ function ProductForm(){
                     type="text" 
                     name="beanType" 
                     placeholder="Bean type" 
+                    required
                     className="w-full border border-[#D6C2A8] rounded-lg px-4 py-3 text-[#4A1F16] placeholder-[#8B6B5C] outline-none focus:ring-2 focus:ring-[#C49A6C]"
                 />
 
