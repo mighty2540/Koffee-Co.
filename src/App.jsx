@@ -7,7 +7,7 @@ import AnalyticsPage from "./pages/AnalyticsPage";
 
 function App() {
   return(
-    <BrowserRouter> 
+    <BrowserRouter basename="/Koffee-Co./"> 
       <Routes>
         <Route element={<DashboardLayout />}>
          <Route path="/" element={<DashboardPage />} />

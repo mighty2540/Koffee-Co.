@@ -1,37 +1,75 @@
-function Sidebar() {
-    return (
-        <aside className="w-64 min-h-screen bg-[#4A1F16] text-[#F8EBCB] p-6">
-            <h1 className="text-2xl font-bold mb-10">
+import { NavLink } from "react-router-dom";
+
+function Sidebar(){
+
+    return(
+        <aside className="w-64 shrink-0 min-h-screen bg-[#4A1F16] text-[#F8EBCB] p-6">
+            <h1 className="text-2xl font-mogra mb-10">
                 Koffee & Co.
             </h1>
 
-            <div className="relative mb-8">
-                <input
-                    type="text"
-                    placeholder="Search..."
-                    className="w-full bg-[#F8EBCB] text-[#4A1F16] placeholder-[#8B6B5C] rounded-lg py-3 pl-10 pr-3 outline-none focus:ring-[#C49A6C]"
-                />
-            </div>
-
             <nav className="flex flex-col gap-4">
-                <a href="/" className="bg-[#6B3828] p-3 rounded-lg font-semibold">
+
+                <NavLink
+                to="/"
+                end
+                className={({isActive}) => 
+                    `p-3 rounded-lg ${
+                        isActive
+                        ? "bg-[#6B3828] font-semibold"
+                        : "hover:bg-[#6B3828]"
+                    }`
+                }
+                >
                     Dashboard
-                </a>
+                </NavLink>
 
-                <a href="/products" className="p-3 rounded-lg hover:bg-[#6B3828]">
+                 <NavLink
+                to="/products"
+                className={({isActive}) => 
+                    `p-3 rounded-lg ${
+                        isActive
+                        ? "bg-[#6B3828] font-semibold"
+                        : "hover:bg-[#6B3828]"
+                    }`
+                }
+                >
                     Products
-                </a>
+                </NavLink>
 
-                <a href="/add-product" className="p-3 rounded-lg hover:bg-[#6B3828]">
+                 <NavLink
+                to="/add-product"
+                end
+                className={({isActive}) => 
+                    `p-3 rounded-lg ${
+                        isActive
+                        ? "bg-[#6B3828] font-semibold"
+                        : "hover:bg-[#6B3828]"
+                    }`
+                }
+                >
                     Add Product
-                </a>
+                </NavLink>
 
-                <a href="/analytics" className="p-3 rounded-lg hover:bg-[#6B3828]">
+                 <NavLink
+                to="/analytics"
+                end
+                className={({isActive}) => 
+                    `p-3 rounded-lg ${
+                        isActive
+                        ? "bg-[#6B3828] font-semibold"
+                        : "hover:bg-[#6B3828]"
+                    }`
+                }
+                >
                     Analytics
-                </a>
+                </NavLink>
+
             </nav>
+
         </aside>
-    );
+    )
+
 }
 
 export default Sidebar;
